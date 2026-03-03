@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <base target="_self">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ImDrivingNow - Bad Credit Car Loans & Subprime Financing</title>
+    <meta name="description" content="Get approved for a car loan even with bad credit. ImDrivingNow specializes in subprime financing with fast approval and easy 3-step process. Drive today!">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#2563eb",
+                        "primary-dark": "#1d4ed8",
+                        "primary-light": "#3b82f6",
+                        secondary: "#1e293b",
+                        accent: "#f59e0b",
+                        "accent-dark": "#d97706"
+                    },
+                    fontFamily: {
+                        'sans': ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                    animation: {
+                        'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                        'fade-in': 'fadeIn 0.8s ease-in-out',
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            '0%': { opacity: '0', transform: 'translateY(10px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        .form-step {
+            display: none;
+        }
+        .form-step.active {
+            display: block;
+            animation: fadeIn 0.5s ease-in-out;
+        }
+        .progress-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: #d1d5db;
+            transition: all 0.3s ease;
+        }
+        .progress-dot.active {
+            background-color: #2563eb;
+            transform: scale(1.2);
+        }
+        .progress-line {
+            height: 2px;
+            background-color: #d1d5db;
+            flex-grow: 1;
+            transition: all 0.3s ease;
+        }
+        .progress-line.active {
+            background-color: #2563eb;
+        }
+        .faq-item {
+            border-bottom: 1px solid #e5e7eb;
+        }
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+        .faq-answer.open {
+            max-height: 500px;
+        }
+        .btn-primary {
+            background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+            transition: all 0.3s ease;
+        }
+        .btn-primary:hover {
+            background: linear-gradient(135deg, #1d4ed8 0%, #1e40af 100%);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(37, 99, 235, 0.3);
+        }
+        .btn-accent {
+            background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+            transition: all 0.3s ease;
+        }
+        .btn-accent:hover {
+            background: linear-gradient(135deg, #d97706 0%, #b45309 100%);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(245, 158, 11, 0.3);
+        }
+    </style>
+</head>
+<body class="min-h-screen bg-gray-50 text-gray-800">
+    <header class="sticky top-0 z-50 bg-white shadow-md">
+        <nav class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-2">
+                    <div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center">
+                        <i class="fas fa-car text-white text-xl"></i>
+                    </div>
+                    <div>
+                        <h1 class="text-2xl font-bold text-primary">ImDriving<span class="text-accent">Now</span></h1>
+                        <p class="text-xs text-gray-500">Bad Credit Car Loans</p>
+                    </div>
+                </div>
+                
+                <ul id="nav-list" class="hidden md:flex items-center space-x-8"></ul>
+                
+                <div class="flex items-center space-x-4">
+                    <a href="tel:416-880-1894" class="hidden md:flex items-center space-x-2 text-primary hover:text-primary-dark">
+                        <i class="fas fa-phone"></i>
+                        <span class="font-semibold">416-880-1894</span>
+                    </a>
+                    <button id="mobile-menu-btn" class="md:hidden text-gray-700">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4 border-t pt-4">
+                <ul id="mobile-nav-list" class="space-y-3"></ul>
+                <div class="mt-4 pt-4 border-t">
+                    <a href="tel:416-880-1894" class="flex items-center space-x-2 text-primary">
+                        <i class="fas fa-phone"></i>
+                        <span class="font-semibold">416-880-1894</span>
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section id="home" class="bg-gradient-to-r from-primary to-primary-dark text-white py-12 md:py-20">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col lg:flex-row items-center">
+                <div class="lg:w-1/2 mb-10 lg:mb-0 animate-fade-in">
+                    <h2 class="text-4xl md:text-5xl font-bold mb-4">Drive Today, <span class="text-accent">Bad Credit</span> OK!</h2>
+                    <p class="text-xl mb-8 text-blue-100">We specialize in getting you approved for a car loan when others say no. Fast, easy, and reliable financing for everyone.</p>
+                    
+                    <div class="flex flex-wrap gap-4 mb-8">
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-accent mr-2 text-xl"></i>
+                            <span>No Credit Check Options</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-accent mr-2 text-xl"></i>
+                            <span>Same-Day Pre-Approval</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-accent mr-2 text-xl"></i>
+                            <span>Low Down Payments</span>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white/10 backdrop-blur-sm rounded-xl p-6 mb-8">
+                        <h3 class="text-2xl font-bold mb-4">Get Pre-Qualified in 60 Seconds</h3>
+                        <p class="mb-4">Start your application now with no impact to your credit score.</p>
+                        <a href="#apply-now" class="btn-accent text-white font-bold py-3 px-8 rounded-lg inline-block">
+                            Start Application <i class="fas fa-arrow-down ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="lg:w-1/2">
+                    <div class="relative">
+                        <img src="https://img.freepik.com/free-photo/car-model-calculator-coins-white-table_1387-584.jpg" alt="Modern car on the road" class="rounded-2xl shadow-2xl w-full">
+                        <div class="absolute -bottom-6 -right-6 bg-white text-secondary p-6 rounded-2xl shadow-2xl max-w-xs hidden sm:block">
+                            <div class="flex items-center mb-2">
+                                <div class="w-12 h-12 rounded-full bg-primary-light flex items-center justify-center mr-4">
+                                    <i class="fas fa-users text-white text-xl"></i>
+                                </div>
+                                <div>
+                                    <p class="text-3xl font-bold">1,000+</p>
+                                    <p class="text-sm">Drivers Approved</p>
+                                </div>
+                            </div>
+                            <p class="text-sm">Join thousands who got their dream car with our bad credit financing.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="process" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-secondary mb-4">Our Easy 3-Step Approval Process</h2>
+                <p class="text-gray-600 text-lg max-w-3xl mx-auto">Getting your car loan with bad credit has never been easier. We've simplified the process so you can drive away fast.</p>
+            </div>
+            
+            <div id="process-steps" class="grid grid-cols-1 md:grid-cols-3 gap-12 max-w-5xl mx-auto pt-8"></div>
+        </div>
+    </section>
+
+    <section id="vehicles" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-secondary mb-4">Find Your Perfect Vehicle</h2>
+                <p class="text-gray-600 text-lg">We work with dealerships nationwide to help you find the right car, truck, or SUV.</p>
+            </div>
+            
+            <div id="vehicle-showcase" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
+            
+            <div class="text-center mt-12">
+                <a href="#apply-now" class="btn-primary text-white font-bold py-3 px-10 rounded-lg inline-block">
+                    See What You Qualify For <i class="fas fa-car ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="faq" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-secondary mb-4">Frequently Asked Questions</h2>
+                <p class="text-gray-600 text-lg">Got questions about bad credit car loans? We've got answers.</p>
+            </div>
+            
+            <div id="faq-container" class="max-w-3xl mx-auto bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden"></div>
+            
+            <div class="text-center mt-12">
+                <p class="text-gray-600 mb-6">Still have questions? Our loan specialists are here to help.</p>
+                <a href="tel:416-880-1894" class="inline-flex items-center text-primary font-bold text-lg">
+                    <i class="fas fa-phone mr-3 text-xl"></i>
+                    <span>Call Now: 416-880-1894</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="pt-16 pb-8 bg-gradient-to-r from-primary to-primary-dark text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4">Ready to Drive Your Dream Car?</h2>
+            <p class="text-xl max-w-3xl mx-auto text-blue-100 mb-4">Don't let bad credit hold you back any longer. Complete the form below and get pre-approved in minutes.</p>
+            <p class="text-sm text-blue-200"><i class="fas fa-lock mr-2"></i> No obligation • No impact to credit score • 100% Confidential</p>
+        </div>
+    </section>
+
+    <section id="apply-now" class="pb-16 pt-8 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto -mt-20 relative z-10">
+                <div class="bg-white rounded-2xl shadow-2xl p-6 md:p-10 border border-gray-100">
+                    
+                    <div class="flex items-center justify-center mb-10">
+                        <div class="flex items-center w-full max-w-md">
+                            <div class="flex flex-col items-center">
+                                <div class="progress-dot active" id="step-1-dot"></div>
+                                <span class="text-sm mt-2 font-medium text-primary" id="step-1-text">Your Info</span>
+                            </div>
+                            <div class="progress-line" id="line-1"></div>
+                            
+                            <div class="flex flex-col items-center">
+                                <div class="progress-dot" id="step-2-dot"></div>
+                                <span class="text-sm mt-2 font-medium text-gray-400" id="step-2-text">Vehicle</span>
+                            </div>
+                            <div class="progress-line" id="line-2"></div>
+                            
+                            <div class="flex flex-col items-center">
+                                <div class="progress-dot" id="step-3-dot"></div>
+                                <span class="text-sm mt-2 font-medium text-gray-400" id="step-3-text">Financing</span>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <form id="loan-application">
+                        <div class="form-step active" id="step-1">
+                            <h3 class="text-2xl font-bold text-secondary mb-6">Tell Us About Yourself</h3>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div>
+                                    <label class="block text-gray-700 mb-2">First Name *</label>
+                                    <input type="text" required class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition">
+                                </div>
+                                <div>
+                                    <label class="block text-gray-700 mb-2">Last Name *</label>
+                                    <input type="text" required class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition">
+                                </div>
+                                <div>
+                                    <label class="block text-gray-700 mb-2">Email Address *</label>
+                                    <input type="email" required class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition">
+                                </div>
+                                <div>
+                                    <label class="block text-gray-700 mb-2">Phone Number *</label>
+                                    <input type="tel" required class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition">
+                                </div>
+                                <div>
+                                    <label class="block text-gray-700 mb-2">Postal Code *</label>
+                                    <input type="text" required class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition">
+                                </div>
+                                <div>
+                                    <label class="block text-gray-700 mb-2">Monthly Income *</label>
+                                    <select required class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition bg-white">
+                                        <option value="">Select Range</option>
+                                        <option value="under-2000">Under $2,000</option>
+                                        <option value="2000-3500">$2,000 - $3,500</option>
+                                        <option value="3500-5000">$3,500 - $5,000</option>
+                                        <option value="5000-plus">$5,000+</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="mt-8">
+                                <p class="text-sm text-gray-500 mb-4">By continuing, you agree to our <a href="#" class="text-primary hover:underline">Terms of Service</a> and <a href="#" class="text-primary hover:underline">Privacy Policy</a>.</p>
+                                <button type="button" class="w-full sm:w-auto btn-primary text-white font-bold py-3 px-8 rounded-lg next-step" data-next="2">
+                                    Continue to Vehicle Details <i class="fas fa-arrow-right ml-2"></i>
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="form-step" id="step-2">
+                            <h3 class="text-2xl font-bold text-secondary mb-6">What Vehicle Are You Interested In?</h3>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div>
+                                    <label class="block text-gray-700 mb-2">Vehicle Type *</label>
+                                    <select required class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition bg-white">
+                                        <option value="">Select Type</option>
+                                        <option value="sedan">Sedan</option>
+                                        <option value="suv">SUV</option>
+                                        <option value="truck">Truck</option>
+                                        <option value="van">Van/Minivan</option>
+                                        <option value="coupe">Coupe</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label class="block text-gray-700 mb-2">Vehicle Year *</label>
+                                    <select required class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition bg-white">
+                                        <option value="">Select Year</option>
+                                        <option value="2023">2023 or Newer</option>
+                                        <option value="2020-2022">2020 - 2022</option>
+                                        <option value="2017-2019">2017 - 2019</option>
+                                        <option value="2014-2016">2014 - 2016</option>
+                                        <option value="older">2013 or Older</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label class="block text-gray-700 mb-2">Estimated Price Range *</label>
+                                    <select required class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition bg-white">
+                                        <option value="">Select Range</option>
+                                        <option value="under-15000">Under $15,000</option>
+                                        <option value="15000-25000">$15,000 - $25,000</option>
+                                        <option value="25000-35000">$25,000 - $35,000</option>
+                                        <option value="35000-plus">$35,000+</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label class="block text-gray-700 mb-2">Down Payment Available *</label>
+                                    <select required class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition bg-white">
+                                        <option value="">Select Amount</option>
+                                        <option value="none">$0 (No Down Payment)</option>
+                                        <option value="under-1000">Under $1,000</option>
+                                        <option value="1000-2500">$1,000 - $2,500</option>
+                                        <option value="2500-plus">$2,500+</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="mt-8 flex flex-col-reverse sm:flex-row justify-between gap-4">
+                                <button type="button" class="text-primary font-bold py-3 px-6 rounded-lg border border-primary hover:bg-blue-50 transition prev-step" data-prev="1">
+                                    <i class="fas fa-arrow-left mr-2"></i> Back
+                                </button>
+                                <button type="button" class="btn-primary text-white font-bold py-3 px-8 rounded-lg next-step" data-next="3">
+                                    Continue to Financing <i class="fas fa-arrow-right ml-2"></i>
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="form-step" id="step-3">
+                            <h3 class="text-2xl font-bold text-secondary mb-6">Almost Done! Final Details</h3>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div>
+                                    <label class="block text-gray-700 mb-2">Employment Status *</label>
+                                    <select required class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition bg-white">
+                                        <option value="">Select Status</option>
+                                        <option value="employed">Employed Full-Time</option>
+                                        <option value="part-time">Employed Part-Time</option>
+                                        <option value="self-employed">Self-Employed</option>
+                                        <option value="retired">Retired</option>
+                                        <option value="other">Other</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label class="block text-gray-700 mb-2">Credit Rating *</label>
+                                    <select required class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition bg-white">
+                                        <option value="">Select Rating</option>
+                                        <option value="excellent">Excellent (720+)</option>
+                                        <option value="good">Good (680-719)</option>
+                                        <option value="fair">Fair (620-679)</option>
+                                        <option value="poor">Poor (580-619)</option>
+                                        <option value="bad">Bad (Below 580)</option>
+                                        <option value="no-credit">No Credit History</option>
+                                    </select>
+                                </div>
+                                <div class="md:col-span-2">
+                                    <label class="block text-gray-700 mb-2">Additional Comments (Optional)</label>
+                                    <textarea class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition" rows="3" placeholder="Tell us anything else we should know about your situation..."></textarea>
+                                </div>
+                            </div>
+                            
+                            <div class="mt-8 bg-blue-50 p-6 rounded-xl border border-blue-100">
+                                <h4 class="font-bold text-lg text-secondary mb-3">What Happens Next?</h4>
+                                <ul class="space-y-2 text-sm text-gray-700">
+                                    <li class="flex items-start">
+                                        <i class="fas fa-check text-accent mt-1 mr-3"></i>
+                                        <span>You'll receive a pre-approval decision within 24 hours</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fas fa-check text-accent mt-1 mr-3"></i>
+                                        <span>One of our loan specialists will contact you to discuss options</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fas fa-check text-accent mt-1 mr-3"></i>
+                                        <span>No obligation - you can walk away at any time</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            
+                            <div class="mt-8 flex flex-col-reverse sm:flex-row justify-between gap-4">
+                                <button type="button" class="text-primary font-bold py-3 px-6 rounded-lg border border-primary hover:bg-blue-50 transition prev-step" data-prev="2">
+                                    <i class="fas fa-arrow-left mr-2"></i> Back
+                                </button>
+                                <button type="submit" class="btn-accent text-white font-bold py-3 px-10 rounded-lg">
+                                    Submit Application <i class="fas fa-paper-plane ml-2"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                    
+                    <div id="success-message" class="hidden text-center py-10 animate-fade-in">
+                        <div class="w-20 h-20 rounded-full bg-green-100 flex items-center justify-center mx-auto mb-6">
+                            <i class="fas fa-check text-green-600 text-3xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-secondary mb-4">Application Submitted Successfully!</h3>
+                        <p class="text-gray-600 mb-6">Thank you for applying with ImDrivingNow. A loan specialist will contact you within 24 hours to discuss your options.</p>
+                        <a href="#home" onclick="resetForm()" class="btn-primary text-white font-bold py-3 px-8 rounded-lg inline-block">
+                            Return to Homepage
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-secondary text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-6">
+                        <div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center">
+                            <i class="fas fa-car text-white text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-bold">ImDriving<span class="text-accent">Now</span></h3>
+                            <p class="text-xs text-gray-400">Bad Credit Car Loans</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 mb-6">Specializing in subprime auto financing to help you get behind the wheel, regardless of your credit history.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary transition">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary transition">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary transition">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-6">Quick Links</h4>
+                    <ul class="space-y-3 text-gray-400">
+                        <li><a href="#home" class="hover:text-white transition">Home</a></li>
+                        <li><a href="#process" class="hover:text-white transition">How it Works</a></li>
+                        <li><a href="#vehicles" class="hover:text-white transition">Vehicles</a></li>
+                        <li><a href="#faq" class="hover:text-white transition">FAQ</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-6">Loan Services</h4>
+                    <ul class="space-y-3 text-gray-400">
+                        <li><a href="#" class="hover:text-white transition">Bad Credit Loans</a></li>
+                        <li><a href="#" class="hover:text-white transition">No Down Payment</a></li>
+                        <li><a href="#" class="hover:text-white transition">Auto Refinancing</a></li>
+                        <li><a href="#" class="hover:text-white transition">Trade-Ins</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-6">Contact Info</h4>
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <i class="fas fa-phone mt-1 mr-3 text-primary"></i>
+                            <div>
+                                <p class="font-medium">416-880-1894</p>
+                                <p class="text-sm text-gray-400">Mon-Fri 8am-8pm EST</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-envelope mt-1 mr-3 text-primary"></i>
+                            <div>
+                                <p class="font-medium">help@imdrivingnow.com</p>
+                                <p class="text-sm text-gray-400">Email Support</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
+                <p>&copy; 2023 ImDrivingNow. All rights reserved. | <a href="#" class="hover:text-white transition">Privacy Policy</a> | <a href="#" class="hover:text-white transition">Terms of Service</a></p>
+                <p class="mt-2 text-xs">ImDrivingNow is not a lender. We connect borrowers with lending partners. Rates and terms vary by lender and individual qualifications.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Data Layer
+        const navigationItems = [
+            { "label": "Home", "href": "#home", "icon": "fas fa-home" },
+            { "label": "How It Works", "href": "#process", "icon": "fas fa-cogs" },
+            { "label": "Vehicles", "href": "#vehicles", "icon": "fas fa-car" },
+            { "label": "FAQ", "href": "#faq", "icon": "fas fa-question-circle" },
+            { "label": "Apply Now", "href": "#apply-now", "icon": "fas fa-file-signature", "highlight": true }
+        ];
+
+        const processSteps = [
+            { 
+                "step": "1", 
+                "title": "Apply Online", 
+                "description": "Complete our simple 3-step application. It takes just 5 minutes and won't affect your credit score.", 
+                "icon": "fas fa-laptop",
+                "color": "bg-primary"
+            },
+            { 
+                "step": "2", 
+                "title": "Get Pre-Approved", 
+                "description": "Receive a pre-approval decision within 24 hours. We work with lenders who specialize in bad credit.", 
+                "icon": "fas fa-check-circle",
+                "color": "bg-accent"
+            },
+            { 
+                "step": "3", 
+                "title": "Drive Away", 
+                "description": "Choose your vehicle and complete the financing. We'll help you through every step until you're driving.", 
+                "icon": "fas fa-car",
+                "color": "bg-green-500"
+            }
+        ];
+
+        const vehicles = [
+            { 
+                "type": "SUV", 
+                "model": "2021 Ford Explorer", 
+                "price": "$28,500", 
+                "description": "Perfect for families with spacious interior and modern safety features.", 
+                "image": "https://cdn-ds.com/blogs-media/sites/678/2020/11/04034957/2021-Ford-Explorer_A_o-1.jpg",
+                "alt": "Ford Explorer SUV"
+            },
+            { 
+                "type": "Sedan", 
+                "model": "2020 Honda Accord", 
+                "price": "$22,900", 
+                "description": "Reliable, fuel-efficient, and packed with technology features.", 
+                "image": "https://www.idrivesocal.com/wp-content/uploads/2019/09/2020-Honda-Accord-passenger-profile.jpg",
+                "alt": "Honda Accord Sedan"
+            },
+            { 
+                "type": "Truck", 
+                "model": "2019 Chevrolet Silverado", 
+                "price": "$32,750", 
+                "description": "Powerful truck with towing capacity for work or play.", 
+                "image": "https://i.ytimg.com/vi/ad87LwTN5NE/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLCr0nqYHLRyJTV8kSb1fTsY0O6LlQ",
+                "alt": "Chevrolet Silverado Truck"
+            }
+        ];
+
+        const faqItems = [
+            { 
+                "question": "Can I really get approved with bad credit?", 
+                "answer": "Yes! We specialize in subprime auto financing and work with lenders who understand that credit challenges happen to good people. While approval isn't guaranteed, we have a high success rate with applicants who have credit scores as low as 500." 
+            },
+            { 
+                "question": "How much down payment do I need?", 
+                "answer": "Down payment requirements vary based on your credit situation and the vehicle you choose. We offer options starting from $0 down for qualified applicants, though a down payment can help secure better terms." 
+            },
+            { 
+                "question": "Will applying affect my credit score?", 
+                "answer": "Our initial application uses a soft credit check that won't impact your score. Only when you proceed with a specific lender will a hard inquiry be made, and we'll always get your permission first." 
+            },
+            { 
+                "question": "How long does the process take?", 
+                "answer": "Most applicants receive a pre-approval decision within 24 hours. Once pre-approved, you can typically complete the financing and drive away within 2-3 days, depending on vehicle availability." 
+            },
+            { 
+                "question": "What interest rates can I expect with bad credit?", 
+                "answer": "Interest rates vary based on your credit profile, income, down payment, and the vehicle. While rates are typically higher for subprime borrowers, we work to secure the most competitive rates available for your situation." 
+            },
+            { 
+                "question": "Do you work with bankruptcies or repossessions?", 
+                "answer": "Yes, we work with applicants who have bankruptcies, repossessions, or other credit challenges. Each situation is evaluated individually, and we have specific programs for various credit circumstances." 
+            }
+        ];
+
+        // --- RENDERING LOGIC ---
+
+        // 1. Render Navigation
+        const navList = document.getElementById('nav-list');
+        const mobileNavList = document.getElementById('mobile-nav-list');
+        navigationItems.forEach(item => {
+            const liClass = item.highlight 
+                ? "bg-accent hover:bg-accent-dark text-white px-5 py-2 rounded-lg font-bold transition shadow-md" 
+                : "text-gray-600 hover:text-primary font-medium transition";
+            navList.innerHTML += `<li><a href="${item.href}" class="${liClass}"><i class="${item.icon} mr-1"></i> ${item.label}</a></li>`;
+            mobileNavList.innerHTML += `<li class="block p-2 border-b border-gray-100 last:border-0"><a href="${item.href}" class="${item.highlight ? 'text-accent font-bold' : 'text-gray-600'} block w-full"><i class="${item.icon} mr-2"></i>${item.label}</a></li>`;
+        });
+
+        // 2. Render Process Steps
+        const processContainer = document.getElementById('process-steps');
+        processSteps.forEach(step => {
+            processContainer.innerHTML += `
+                <div class="bg-white p-8 rounded-2xl shadow-lg border border-gray-100 text-center relative mt-12 md:mt-0 hover:shadow-xl transition duration-300 transform hover:-translate-y-1">
+                    <div class="w-16 h-16 rounded-full ${step.color} text-white flex items-center justify-center text-2xl font-bold absolute -top-8 left-1/2 transform -translate-x-1/2 shadow-lg border-4 border-white">
+                        ${step.step}
+                    </div>
+                    <div class="mt-6">
+                        <div class="w-16 h-16 mx-auto bg-gray-50 rounded-full flex items-center justify-center mb-4">
+                            <i class="${step.icon} text-3xl text-gray-400"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">${step.title}</h3>
+                        <p class="text-gray-600">${step.description}</p>
+                    </div>
+                </div>
+            `;
+        });
+
+        // 3. Render Vehicles
+        const vehicleContainer = document.getElementById('vehicle-showcase');
+        vehicles.forEach(v => {
+            vehicleContainer.innerHTML += `
+                <div class="bg-gray-50 rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition duration-300 border border-gray-100 flex flex-col">
+                    <img src="${v.image}" alt="${v.alt}" class="w-full h-56 object-cover hover:scale-105 transition duration-500">
+                    <div class="p-6 flex-grow">
+                        <span class="text-xs font-bold text-primary bg-blue-100 px-3 py-1 rounded-full uppercase tracking-wider">${v.type}</span>
+                        <h3 class="text-xl font-bold mt-4 mb-2">${v.model}</h3>
+                        <p class="text-2xl font-black text-secondary mb-3">${v.price}</p>
+                        <p class="text-gray-600 text-sm">${v.description}</p>
+                    </div>
+                </div>
+            `;
+        });
+
+        // 4. Render FAQ
+        const faqContainer = document.getElementById('faq-container');
+        faqItems.forEach((faq, index) => {
+            faqContainer.innerHTML += `
+                <div class="faq-item p-6 cursor-pointer hover:bg-gray-50 transition" onclick="toggleFaq(${index})">
+                    <div class="flex justify-between items-center">
+                        <h4 class="text-lg font-bold text-secondary pr-8">${faq.question}</h4>
+                        <div class="w-8 h-8 rounded-full bg-gray-100 flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-chevron-down text-primary transition-transform duration-300" id="faq-icon-${index}"></i>
+                        </div>
+                    </div>
+                    <div class="faq-answer text-gray-600" id="faq-answer-${index}">
+                        <p class="pt-4 leading-relaxed">${faq.answer}</p>
+                    </div>
+                </div>
+            `;
+        });
+
+        // Toggle FAQ function
+        window.toggleFaq = function(index) {
+            const answer = document.getElementById(`faq-answer-${index}`);
+            const icon = document.getElementById(`faq-icon-${index}`);
+            
+            // Close all others
+            document.querySelectorAll('.faq-answer').forEach((el, i) => {
+                if (i !== index) {
+                    el.classList.remove('open');
+                    document.getElementById(`faq-icon-${i}`).style.transform = 'rotate(0deg)';
+                }
+            });
+
+            // Toggle current
+            answer.classList.toggle('open');
+            if(answer.classList.contains('open')) {
+                icon.style.transform = 'rotate(180deg)';
+            } else {
+                icon.style.transform = 'rotate(0deg)';
+            }
+        };
+
+        // Mobile Menu Toggle
+        document.getElementById('mobile-menu-btn').addEventListener('click', () => {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+
+        // Multi-Step Form Logic
+        const nextBtns = document.querySelectorAll('.next-step');
+        const prevBtns = document.querySelectorAll('.prev-step');
+        
+        nextBtns.forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                const nextStep = e.target.closest('.next-step').dataset.next;
+                const currentStep = nextStep - 1;
+                
+                // Switch forms
+                document.getElementById(`step-${currentStep}`).classList.remove('active');
+                document.getElementById(`step-${nextStep}`).classList.add('active');
+                
+                // Update UI Indicators
+                document.getElementById(`step-${nextStep}-dot`).classList.add('active');
+                document.getElementById(`step-${nextStep}-text`).classList.remove('text-gray-400');
+                document.getElementById(`step-${nextStep}-text`).classList.add('text-primary');
+                document.getElementById(`line-${currentStep}`).classList.add('active');
+            });
+        });
+        
+        prevBtns.forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                const prevStep = e.target.closest('.prev-step').dataset.prev;
+                const currentStep = parseInt(prevStep) + 1;
+                
+                // Switch forms
+                document.getElementById(`step-${currentStep}`).classList.remove('active');
+                document.getElementById(`step-${prevStep}`).classList.add('active');
+                
+                // Update UI Indicators
+                document.getElementById(`step-${currentStep}-dot`).classList.remove('active');
+                document.getElementById(`step-${currentStep}-text`).classList.add('text-gray-400');
+                document.getElementById(`step-${currentStep}-text`).classList.remove('text-primary');
+                document.getElementById(`line-${prevStep}`).classList.remove('active');
+            });
+        });
+
+        // Form Submission
+        document.getElementById('loan-application').addEventListener('submit', (e) => {
+            e.preventDefault();
+            document.getElementById('loan-application').style.display = 'none';
+            document.getElementById('success-message').classList.remove('hidden');
+            // Hide progress dots on success
+            document.querySelector('.progress-dot').parentElement.parentElement.style.display = 'none';
+        });
+
+        // Reset form (for the success message button)
+        window.resetForm = function() {
+            document.getElementById('loan-application').reset();
+            document.getElementById('success-message').classList.add('hidden');
+            document.getElementById('loan-application').style.display = 'block';
+            document.querySelector('.progress-dot').parentElement.parentElement.style.display = 'flex';
+            
+            // Go back to step 1 visually
+            document.querySelectorAll('.form-step').forEach(step => step.classList.remove('active'));
+            document.getElementById('step-1').classList.add('active');
+            
+            // Reset UI indicators
+            document.querySelectorAll('.progress-dot').forEach((dot, idx) => {
+                if(idx > 0) dot.classList.remove('active');
+            });
+            document.querySelectorAll('.progress-line').forEach(line => line.classList.remove('active'));
+            document.getElementById('step-2-text').classList.add('text-gray-400');
+            document.getElementById('step-2-text').classList.remove('text-primary');
+            document.getElementById('step-3-text').classList.add('text-gray-400');
+            document.getElementById('step-3-text').classList.remove('text-primary');
+        };
+    </script>
+</body>
+</html>
