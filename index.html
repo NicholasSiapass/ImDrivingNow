@@ -4,8 +4,8 @@
     <base target="_self">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Easy Online Approvals - Financial Solutions for All Your Needs</title>
-    <meta name="description" content="Good or bad credit, get approved for vehicle loans, mortgages, personal loans, and consolidation. 0% down available.">
+    <title>EasyOnlineApprovals - Comprehensive Financing Solutions</title>
+    <meta name="description" content="Good or bad credit, get approved for vehicle loans, mortgages, personal loans, and debt consolidation. Start your application today!">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -17,8 +17,8 @@
                         "primary-dark": "#1d4ed8",
                         "primary-light": "#3b82f6",
                         secondary: "#1e293b",
-                        accent: "#008640",
-                        "accent-dark": "#006832",
+                        accent: "#55CA7C",
+                        "accent-dark": "#45a364",
                         "brand-teal": "#14b8a6",
                     },
                     fontFamily: {
@@ -46,33 +46,6 @@
         html {
             scroll-behavior: smooth;
         }
-        .form-step {
-            display: none;
-        }
-        .form-step.active {
-            display: block;
-            animation: fadeIn 0.5s ease-in-out;
-        }
-        .progress-dot {
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-            background-color: #d1d5db;
-            transition: all 0.3s ease;
-        }
-        .progress-dot.active {
-            background-color: #2563eb;
-            transform: scale(1.2);
-        }
-        .progress-line {
-            height: 2px;
-            background-color: #d1d5db;
-            flex-grow: 1;
-            transition: all 0.3s ease;
-        }
-        .progress-line.active {
-            background-color: #2563eb;
-        }
         .faq-item {
             border-bottom: 1px solid #e5e7eb;
         }
@@ -94,13 +67,13 @@
             box-shadow: 0 10px 25px rgba(37, 99, 235, 0.3);
         }
         .btn-accent {
-            background: linear-gradient(135deg, #008640 0%, #006832 100%);
+            background: linear-gradient(135deg, #55CA7C 0%, #45a364 100%);
             transition: all 0.3s ease;
         }
         .btn-accent:hover {
-            background: linear-gradient(135deg, #006832 0%, #004b24 100%);
+            background: linear-gradient(135deg, #45a364 0%, #35824e 100%);
             transform: translateY(-2px);
-            box-shadow: 0 10px 25px rgba(0, 134, 64, 0.3);
+            box-shadow: 0 10px 25px rgba(85, 202, 124, 0.3);
         }
     </style>
 </head>
@@ -113,8 +86,8 @@
                         <i class="fas fa-check text-white text-xl"></i>
                     </div>
                     <div>
-                        <h1 class="text-2xl font-bold text-primary">Easy Online <span class="text-accent">Approvals</span></h1>
-                        <p class="text-xs text-gray-500">Financial Solutions</p>
+                        <h1 class="text-2xl font-bold text-primary">EasyOnline<span class="text-accent">Approvals</span></h1>
+                        <p class="text-xs text-gray-500">Fast & Reliable Funding</p>
                     </div>
                 </div>
                 
@@ -176,7 +149,7 @@
                 
                 <div class="lg:w-1/2">
                     <div class="relative">
-                        <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&q=80&w=2940&ixlib=rb-4.0.3" alt="Happy couple consulting financial professional" class="rounded-2xl shadow-2xl w-full">
+                        <img src="https://media.istockphoto.com/id/1165215000/photo/young-family-man-and-woman-checking.jpg?s=612x612&w=0&k=20&c=ukFPCO-rYQ_TgbDV0jIay0FndrED7IrFBlXxfkMhD3I=" alt="Young family checking finances" class="rounded-2xl shadow-2xl w-full object-cover">
                         <div class="absolute -bottom-6 -right-6 bg-white text-secondary p-6 rounded-2xl shadow-2xl max-w-xs hidden sm:block">
                             <div class="flex items-center mb-2">
                                 <div class="w-12 h-12 rounded-full bg-primary-light flex items-center justify-center mr-4">
@@ -195,47 +168,40 @@
         </div>
     </section>
 
-    <section id="services" class="py-16 bg-white">
+    <section id="services" class="py-16 bg-gray-50">
         <div class="container mx-auto px-4">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl md:text-4xl font-bold text-secondary mb-2">Complete <span class="text-brand-teal">Financial Care</span></h2>
-                <p class="text-gray-600 text-lg max-w-3xl mx-auto">Solutions for all your financial needs. We do vehicle and recreational loans and solutions for all your needs.</p>
+            <div class="text-left md:text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-black text-secondary mb-4 tracking-tight">Comprehensive <span class="text-primary">Loan Options</span></h2>
+                <p class="text-gray-600 text-lg max-w-2xl mx-auto">We provide versatile financing solutions tailored to your unique lifestyle. From everyday vehicles to big-ticket recreational purchases, we've got you covered.</p>
             </div>
             
-            <div id="services-showcase" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"></div>
+            <div id="services-showcase" class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto"></div>
         </div>
     </section>
 
-    <section class="py-16 bg-gray-50 border-t border-gray-100">
-        <div class="container mx-auto px-4">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl md:text-4xl font-bold text-secondary mb-2">Credit <span class="text-brand-teal">Specialists</span></h2>
-                <p class="text-gray-600 text-lg">No matter your history, we have a prescription for your financial health.</p>
-            </div>
-            
-            <div id="credit-specialists" class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto"></div>
-        </div>
-    </section>
-
-    <section id="process" class="py-16 bg-white border-t border-gray-100">
-        <div class="container mx-auto px-4">
+    <section class="py-20 bg-white border-t border-gray-100 relative overflow-hidden">
+        <div class="absolute top-0 right-0 -mt-20 -mr-20 w-96 h-96 bg-blue-50 rounded-full blur-3xl opacity-70 pointer-events-none"></div>
+        <div class="absolute bottom-0 left-0 -mb-20 -ml-20 w-96 h-96 bg-green-50 rounded-full blur-3xl opacity-70 pointer-events-none"></div>
+        
+        <div class="container mx-auto px-4 relative z-10">
             <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold text-secondary mb-4">Our Easy 3-Step Approval Process</h2>
-                <p class="text-gray-600 text-lg max-w-3xl mx-auto">Getting approved has never been easier. We've simplified the process so you can get funded fast.</p>
+                <span class="text-sm font-bold text-accent-dark bg-green-50 border border-green-100 px-5 py-2 rounded-full tracking-wider uppercase mb-5 inline-block shadow-sm">Financing For Every Profile</span>
+                <h2 class="text-3xl md:text-5xl font-black mb-5 text-secondary tracking-tight">Your Pathway to <span class="text-primary">Approval</span></h2>
+                <p class="text-gray-600 text-lg max-w-2xl mx-auto leading-relaxed">Regardless of your past financial hurdles, our team works hard to find a lending strategy that fits your current situation.</p>
             </div>
             
-            <div id="process-steps" class="grid grid-cols-1 md:grid-cols-3 gap-12 max-w-5xl mx-auto pt-8"></div>
+            <div id="credit-specialists" class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto"></div>
         </div>
     </section>
 
-    <section id="faq" class="py-16 bg-gray-50">
+    <section id="faq" class="py-16 bg-gray-50 border-t border-gray-100">
         <div class="container mx-auto px-4">
             <div class="text-center mb-12">
                 <h2 class="text-3xl md:text-4xl font-bold text-secondary mb-4">Frequently Asked Questions</h2>
                 <p class="text-gray-600 text-lg">Got questions about our loans? We've got answers.</p>
             </div>
             
-            <div id="faq-container" class="max-w-3xl mx-auto bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden"></div>
+            <div id="faq-container" class="max-w-3xl mx-auto bg-white rounded-2xl shadow-sm border border-gray-200 overflow-hidden"></div>
             
             <div class="text-center mt-12">
                 <p class="text-gray-600 mb-6">Still have questions? Our loan specialists are here to help.</p>
@@ -259,31 +225,9 @@
         <div class="container mx-auto px-4">
             <div class="max-w-4xl mx-auto -mt-20 relative z-10">
                 <div class="bg-white rounded-2xl shadow-2xl p-6 md:p-10 border border-gray-100">
-                    
-                    <div class="flex items-center justify-center mb-10">
-                        <div class="flex items-center w-full max-w-md">
-                            <div class="flex flex-col items-center">
-                                <div class="progress-dot active" id="step-1-dot"></div>
-                                <span class="text-sm mt-2 font-medium text-primary" id="step-1-text">Your Info</span>
-                            </div>
-                            <div class="progress-line" id="line-1"></div>
-                            
-                            <div class="flex flex-col items-center">
-                                <div class="progress-dot" id="step-2-dot"></div>
-                                <span class="text-sm mt-2 font-medium text-gray-400" id="step-2-text">Loan Details</span>
-                            </div>
-                            <div class="progress-line" id="line-2"></div>
-                            
-                            <div class="flex flex-col items-center">
-                                <div class="progress-dot" id="step-3-dot"></div>
-                                <span class="text-sm mt-2 font-medium text-gray-400" id="step-3-text">Financing</span>
-                            </div>
-                        </div>
-                    </div>
-                
                     <form id="loan-application">
-                        <div class="form-step active" id="step-1">
-                            <h3 class="text-2xl font-bold text-secondary mb-6">Tell Us About Yourself</h3>
+                        <div>
+                            <h3 class="text-2xl font-bold text-secondary mb-6">Request Your Free Quote</h3>
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                                 <div>
                                     <label class="block text-gray-700 mb-2">First Name *</label>
@@ -327,101 +271,7 @@
                             </div>
                             <div class="mt-8">
                                 <p class="text-sm text-gray-500 mb-4">By continuing, you agree to our <a href="#" class="text-primary hover:underline">Terms of Service</a> and <a href="#" class="text-primary hover:underline">Privacy Policy</a>.</p>
-                                <button type="button" class="w-full sm:w-auto btn-primary text-white font-bold py-3 px-8 rounded-lg next-step" data-next="2">
-                                    Continue to Loan Details <i class="fas fa-arrow-right ml-2"></i>
-                                </button>
-                            </div>
-                        </div>
-                        
-                        <div class="form-step" id="step-2">
-                            <h3 class="text-2xl font-bold text-secondary mb-6">What type of loan do you need?</h3>
-                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                                <div>
-                                    <label class="block text-gray-700 mb-2">Loan Category *</label>
-                                    <select required class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition bg-white">
-                                        <option value="">Select Type</option>
-                                        <option value="auto">Auto / Vehicle</option>
-                                        <option value="recreational">Boat / RV / Motorcycle</option>
-                                        <option value="personal">Personal Loan</option>
-                                        <option value="mortgage">Mortgage</option>
-                                        <option value="consolidation">Debt Consolidation</option>
-                                    </select>
-                                </div>
-                                <div>
-                                    <label class="block text-gray-700 mb-2">Estimated Amount Needed *</label>
-                                    <select required class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition bg-white">
-                                        <option value="">Select Range</option>
-                                        <option value="under-15000">Under $15,000</option>
-                                        <option value="15000-25000">$15,000 - $25,000</option>
-                                        <option value="25000-50000">$25,000 - $50,000</option>
-                                        <option value="50000-plus">$50,000+</option>
-                                    </select>
-                                </div>
-                                <div>
-                                    <label class="block text-gray-700 mb-2">Down Payment Available *</label>
-                                    <select required class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition bg-white">
-                                        <option value="">Select Amount</option>
-                                        <option value="none">$0 (No Down Payment)</option>
-                                        <option value="under-1000">Under $1,000</option>
-                                        <option value="1000-2500">$1,000 - $2,500</option>
-                                        <option value="2500-plus">$2,500+</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="mt-8 flex flex-col-reverse sm:flex-row justify-between gap-4">
-                                <button type="button" class="text-primary font-bold py-3 px-6 rounded-lg border border-primary hover:bg-blue-50 transition prev-step" data-prev="1">
-                                    <i class="fas fa-arrow-left mr-2"></i> Back
-                                </button>
-                                <button type="button" class="btn-primary text-white font-bold py-3 px-8 rounded-lg next-step" data-next="3">
-                                    Continue to Financing <i class="fas fa-arrow-right ml-2"></i>
-                                </button>
-                            </div>
-                        </div>
-                        
-                        <div class="form-step" id="step-3">
-                            <h3 class="text-2xl font-bold text-secondary mb-6">Almost Done! Final Details</h3>
-                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                                <div>
-                                    <label class="block text-gray-700 mb-2">Credit Rating *</label>
-                                    <select required class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition bg-white">
-                                        <option value="">Select Rating</option>
-                                        <option value="excellent">Excellent (720+)</option>
-                                        <option value="good">Good (680-719)</option>
-                                        <option value="fair">Fair (620-679)</option>
-                                        <option value="poor">Poor (580-619)</option>
-                                        <option value="bad">Bad (Below 580)</option>
-                                        <option value="no-credit">No Credit History</option>
-                                    </select>
-                                </div>
-                                <div class="md:col-span-2">
-                                    <label class="block text-gray-700 mb-2">Additional Comments (Optional)</label>
-                                    <textarea class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition" rows="3" placeholder="Tell us anything else we should know about your situation..."></textarea>
-                                </div>
-                            </div>
-                            
-                            <div class="mt-8 bg-blue-50 p-6 rounded-xl border border-blue-100">
-                                <h4 class="font-bold text-lg text-secondary mb-3">What Happens Next?</h4>
-                                <ul class="space-y-2 text-sm text-gray-700">
-                                    <li class="flex items-start">
-                                        <i class="fas fa-check text-accent mt-1 mr-3"></i>
-                                        <span>You'll receive a pre-approval decision within 24 hours</span>
-                                    </li>
-                                    <li class="flex items-start">
-                                        <i class="fas fa-check text-accent mt-1 mr-3"></i>
-                                        <span>One of our loan specialists will contact you to discuss options</span>
-                                    </li>
-                                    <li class="flex items-start">
-                                        <i class="fas fa-check text-accent mt-1 mr-3"></i>
-                                        <span>No obligation - you can walk away at any time</span>
-                                    </li>
-                                </ul>
-                            </div>
-                            
-                            <div class="mt-8 flex flex-col-reverse sm:flex-row justify-between gap-4">
-                                <button type="button" class="text-primary font-bold py-3 px-6 rounded-lg border border-primary hover:bg-blue-50 transition prev-step" data-prev="2">
-                                    <i class="fas fa-arrow-left mr-2"></i> Back
-                                </button>
-                                <button type="submit" class="btn-accent text-white font-bold py-3 px-10 rounded-lg">
+                                <button type="submit" class="w-full sm:w-auto btn-accent text-white font-bold py-3 px-10 rounded-lg hover:shadow-lg transition">
                                     Submit Application <i class="fas fa-paper-plane ml-2"></i>
                                 </button>
                             </div>
@@ -433,7 +283,7 @@
                             <i class="fas fa-check text-green-600 text-3xl"></i>
                         </div>
                         <h3 class="text-2xl font-bold text-secondary mb-4">Application Submitted Successfully!</h3>
-                        <p class="text-gray-600 mb-6">Thank you for applying with Easy Online Approvals. A loan specialist will contact you within 24 hours to discuss your options.</p>
+                        <p class="text-gray-600 mb-6">Thank you for applying with EasyOnlineApprovals. A loan specialist will contact you within 24 hours to discuss your options.</p>
                         <a href="#home" onclick="resetForm()" class="btn-primary text-white font-bold py-3 px-8 rounded-lg inline-block">
                             Return to Homepage
                         </a>
@@ -452,7 +302,7 @@
                             <i class="fas fa-check text-white text-xl"></i>
                         </div>
                         <div>
-                            <h3 class="text-2xl font-bold">Easy Online <span class="text-accent">Approvals</span></h3>
+                            <h3 class="text-2xl font-bold">EasyOnline<span class="text-accent">Approvals</span></h3>
                             <p class="text-xs text-gray-400">Financial Solutions</p>
                         </div>
                     </div>
@@ -474,7 +324,6 @@
                     <h4 class="text-lg font-bold mb-6">Quick Links</h4>
                     <ul class="space-y-3 text-gray-400">
                         <li><a href="#home" class="hover:text-white transition">Home</a></li>
-                        <li><a href="#process" class="hover:text-white transition">How it Works</a></li>
                         <li><a href="#services" class="hover:text-white transition">Services</a></li>
                         <li><a href="#faq" class="hover:text-white transition">FAQ</a></li>
                     </ul>
@@ -512,8 +361,8 @@
             </div>
             
             <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
-                <p>&copy; 2023 Easy Online Approvals. All rights reserved. | <a href="#" class="hover:text-white transition">Privacy Policy</a> | <a href="#" class="hover:text-white transition">Terms of Service</a></p>
-                <p class="mt-2 text-xs">Easy Online Approvals is not a lender. We connect borrowers with lending partners. Rates and terms vary by lender and individual qualifications.</p>
+                <p>&copy; 2023 EasyOnlineApprovals. All rights reserved. | <a href="#" class="hover:text-white transition">Privacy Policy</a> | <a href="#" class="hover:text-white transition">Terms of Service</a></p>
+                <p class="mt-2 text-xs">EasyOnlineApprovals is not a lender. We connect borrowers with lending partners. Rates and terms vary by lender and individual qualifications.</p>
             </div>
         </div>
     </footer>
@@ -522,74 +371,60 @@
         // Data Layer
         const navigationItems = [
             { "label": "Home", "href": "#home", "icon": "fas fa-home" },
-            { "label": "How It Works", "href": "#process", "icon": "fas fa-cogs" },
             { "label": "Services", "href": "#services", "icon": "fas fa-briefcase" },
             { "label": "FAQ", "href": "#faq", "icon": "fas fa-question-circle" },
             { "label": "Apply Now", "href": "#apply-now", "icon": "fas fa-file-signature", "highlight": true }
         ];
 
-        const processSteps = [
-            { 
-                "step": "1", 
-                "title": "Apply Online", 
-                "description": "Complete our simple 3-step application. It takes just 5 minutes and won't affect your credit score.", 
-                "icon": "fas fa-laptop",
-                "color": "bg-primary"
-            },
-            { 
-                "step": "2", 
-                "title": "Get Pre-Approved", 
-                "description": "Receive a pre-approval decision within 24 hours. We work with lenders who specialize in all credit types.", 
-                "icon": "fas fa-check-circle",
-                "color": "bg-accent"
-            },
-            { 
-                "step": "3", 
-                "title": "Get Funded", 
-                "description": "Complete the financing for your vehicle, mortgage, or personal loan. We'll help you through every step.", 
-                "icon": "fas fa-hand-holding-usd",
-                "color": "bg-green-500"
-            }
-        ];
-
+        // Reworded Services
         const services = [
             { 
                 "icon": "fas fa-car",
-                "title": "Vehicle Loans", 
-                "desc": "Auto, boats, recreational, motorcycles, snowmobiles, RVs, etc. Ask for our inventory availability or finance your own find." 
+                "title": "Vehicle Financing", 
+                "desc": "Cars, trucks, RVs, boats, motorcycles, and more. Choose from our dealer network's inventory or get financing for a private sale." 
             },
             { 
                 "icon": "fas fa-wallet",
                 "title": "Personal Loans", 
-                "desc": "Unsecured loans for vacations, weddings, renovations, or unexpected expenses." 
+                "desc": "Fast cash for life's moments. Whether it's home improvements, a dream vacation, or covering surprise bills, our unsecured options can help." 
             },
             { 
                 "icon": "fas fa-home",
                 "title": "Mortgages", 
-                "desc": "First-time buyers, refinancing, or second mortgages. We have lenders for every situation." 
+                "desc": "Looking to buy your first home, tap into equity, or refinance? We connect you with mortgage lenders suited to your specific goals." 
             },
             { 
                 "icon": "fas fa-chart-pie",
-                "title": "Consolidation", 
-                "desc": "Combine high-interest debts into one manageable monthly payment and lower your rates." 
+                "title": "Debt Consolidation", 
+                "desc": "Take control of your finances by rolling multiple high-interest balances into a single, affordable monthly payment." 
             }
         ];
 
+        // Reworded Light Theme Credit Profiles
         const creditProfiles = [
              { 
-                 "icon": "fas fa-star text-brand-teal", 
-                 "title": "Good Credit", 
-                 "desc": "Enjoy the rewards of your hard work. We offer the lowest market rates, flexible terms, and premium loan products." 
+                 "icon": "fas fa-star", 
+                 "iconBg": "bg-green-50",
+                 "iconColor": "text-green-600",
+                 "borderColor": "border-green-400",
+                 "title": "Excellent & Good Credit", 
+                 "desc": "Maximize your excellent rating. Unlock the most competitive interest rates, top-tier loan products, and flexible payment terms available." 
              },
              { 
-                 "icon": "fas fa-heartbeat text-red-400", 
-                 "title": "Bad Credit", 
-                 "desc": "Life happens. We specialize in 'recovery' loans that help rebuild your score securely and safely." 
+                 "icon": "fas fa-heartbeat", 
+                 "iconBg": "bg-blue-50",
+                 "iconColor": "text-blue-600",
+                 "borderColor": "border-blue-400",
+                 "title": "Bad or Fair Credit", 
+                 "desc": "Don't let past struggles hold you back. We focus on approval programs designed to get you funded while helping you rebuild your credit over time." 
              },
              { 
-                 "icon": "fas fa-seedling text-blue-500", 
-                 "title": "No Credit", 
-                 "desc": "New to the country or a first-time borrower? Establish a healthy foundation with our 'New Start' lending options." 
+                 "icon": "fas fa-seedling", 
+                 "iconBg": "bg-teal-50",
+                 "iconColor": "text-teal-600",
+                 "borderColor": "border-teal-400",
+                 "title": "No Credit History", 
+                 "desc": "Just starting out or recently arrived in Canada? Build a strong financial foundation with our specialized first-time borrower and newcomer programs." 
              }
         ];
 
@@ -629,63 +464,44 @@
             mobileNavList.innerHTML += `<li class="block p-2 border-b border-gray-100 last:border-0"><a href="${item.href}" class="${item.highlight ? 'text-accent font-bold' : 'text-gray-600'} block w-full"><i class="${item.icon} mr-2"></i>${item.label}</a></li>`;
         });
 
-        // 2. Render Process Steps
-        const processContainer = document.getElementById('process-steps');
-        processSteps.forEach(step => {
-            processContainer.innerHTML += `
-                <div class="bg-white p-8 rounded-2xl shadow-lg border border-gray-100 text-center relative mt-12 md:mt-0 hover:shadow-xl transition duration-300 transform hover:-translate-y-1">
-                    <div class="w-16 h-16 rounded-full ${step.color} text-white flex items-center justify-center text-2xl font-bold absolute -top-8 left-1/2 transform -translate-x-1/2 shadow-lg border-4 border-white">
-                        ${step.step}
-                    </div>
-                    <div class="mt-6">
-                        <div class="w-16 h-16 mx-auto bg-gray-50 rounded-full flex items-center justify-center mb-4">
-                            <i class="${step.icon} text-3xl text-gray-400"></i>
-                        </div>
-                        <h3 class="text-xl font-bold mb-3">${step.title}</h3>
-                        <p class="text-gray-600">${step.description}</p>
-                    </div>
-                </div>
-            `;
-        });
-
-        // 3. Render Services
+        // 2. Render Services (Blue borders and icons)
         const servicesContainer = document.getElementById('services-showcase');
         services.forEach(s => {
             servicesContainer.innerHTML += `
-                <div class="bg-blue-50/50 p-8 rounded-2xl text-center shadow-sm hover:shadow-md border border-blue-100 transition duration-300 flex flex-col items-center">
-                    <div class="w-14 h-14 bg-white rounded-full flex items-center justify-center mb-6 shadow-sm text-brand-teal">
+                <div class="bg-white p-6 md:p-8 rounded-2xl shadow-md border-l-4 border-primary hover:shadow-xl transition duration-300 flex items-start text-left group">
+                    <div class="w-14 h-14 bg-blue-50 rounded-xl flex items-center justify-center mr-6 flex-shrink-0 text-primary group-hover:scale-110 group-hover:bg-primary group-hover:text-white transition-all duration-300 shadow-sm">
                         <i class="${s.icon} text-2xl"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-secondary mb-3">${s.title}</h3>
-                    <p class="text-gray-600 text-sm leading-relaxed">${s.desc}</p>
+                    <div>
+                        <h3 class="text-xl font-bold text-secondary mb-2">${s.title}</h3>
+                        <p class="text-gray-600 leading-relaxed">${s.desc}</p>
+                    </div>
                 </div>
             `;
         });
 
-        // 4. Render Credit Specialists
+        // 3. Render Credit Specialists (Light Theme centered cards)
         const creditContainer = document.getElementById('credit-specialists');
         creditProfiles.forEach(c => {
             creditContainer.innerHTML += `
-                <div class="bg-white p-8 rounded-2xl shadow-md border border-gray-100 hover:shadow-xl transition duration-300">
-                    <div class="flex items-center mb-4">
-                        <div class="w-10 h-10 rounded-full bg-gray-50 flex items-center justify-center mr-4">
-                            <i class="${c.icon} text-xl"></i>
-                        </div>
-                        <h3 class="text-xl font-bold text-secondary">${c.title}</h3>
+                <div class="bg-white p-8 rounded-2xl border-t-4 ${c.borderColor} hover:-translate-y-2 transition duration-300 transform shadow-md hover:shadow-xl text-center">
+                    <div class="w-16 h-16 rounded-full ${c.iconBg} mx-auto flex items-center justify-center mb-6 shadow-sm ${c.iconColor}">
+                        <i class="${c.icon} text-2xl"></i>
                     </div>
-                    <p class="text-gray-600 text-sm leading-relaxed">${c.desc}</p>
+                    <h3 class="text-xl font-bold text-secondary mb-3">${c.title}</h3>
+                    <p class="text-gray-600 leading-relaxed text-sm">${c.desc}</p>
                 </div>
             `;
         });
 
-        // 5. Render FAQ
+        // 4. Render FAQ
         const faqContainer = document.getElementById('faq-container');
         faqItems.forEach((faq, index) => {
             faqContainer.innerHTML += `
                 <div class="faq-item p-6 cursor-pointer hover:bg-gray-50 transition" onclick="toggleFaq(${index})">
                     <div class="flex justify-between items-center">
                         <h4 class="text-lg font-bold text-secondary pr-8">${faq.question}</h4>
-                        <div class="w-8 h-8 rounded-full bg-gray-100 flex items-center justify-center flex-shrink-0">
+                        <div class="w-8 h-8 rounded-full bg-white border border-gray-200 flex items-center justify-center flex-shrink-0 shadow-sm">
                             <i class="fas fa-chevron-down text-primary transition-transform duration-300" id="faq-icon-${index}"></i>
                         </div>
                     </div>
@@ -723,51 +539,11 @@
             document.getElementById('mobile-menu').classList.toggle('hidden');
         });
 
-        // Multi-Step Form Logic
-        const nextBtns = document.querySelectorAll('.next-step');
-        const prevBtns = document.querySelectorAll('.prev-step');
-        
-        nextBtns.forEach(btn => {
-            btn.addEventListener('click', (e) => {
-                const nextStep = e.target.closest('.next-step').dataset.next;
-                const currentStep = nextStep - 1;
-                
-                // Switch forms
-                document.getElementById(`step-${currentStep}`).classList.remove('active');
-                document.getElementById(`step-${nextStep}`).classList.add('active');
-                
-                // Update UI Indicators
-                document.getElementById(`step-${nextStep}-dot`).classList.add('active');
-                document.getElementById(`step-${nextStep}-text`).classList.remove('text-gray-400');
-                document.getElementById(`step-${nextStep}-text`).classList.add('text-primary');
-                document.getElementById(`line-${currentStep}`).classList.add('active');
-            });
-        });
-        
-        prevBtns.forEach(btn => {
-            btn.addEventListener('click', (e) => {
-                const prevStep = e.target.closest('.prev-step').dataset.prev;
-                const currentStep = parseInt(prevStep) + 1;
-                
-                // Switch forms
-                document.getElementById(`step-${currentStep}`).classList.remove('active');
-                document.getElementById(`step-${prevStep}`).classList.add('active');
-                
-                // Update UI Indicators
-                document.getElementById(`step-${currentStep}-dot`).classList.remove('active');
-                document.getElementById(`step-${currentStep}-text`).classList.add('text-gray-400');
-                document.getElementById(`step-${currentStep}-text`).classList.remove('text-primary');
-                document.getElementById(`line-${prevStep}`).classList.remove('active');
-            });
-        });
-
         // Form Submission
         document.getElementById('loan-application').addEventListener('submit', (e) => {
             e.preventDefault();
             document.getElementById('loan-application').style.display = 'none';
             document.getElementById('success-message').classList.remove('hidden');
-            // Hide progress dots on success
-            document.querySelector('.progress-dot').parentElement.parentElement.style.display = 'none';
         });
 
         // Reset form (for the success message button)
@@ -775,21 +551,6 @@
             document.getElementById('loan-application').reset();
             document.getElementById('success-message').classList.add('hidden');
             document.getElementById('loan-application').style.display = 'block';
-            document.querySelector('.progress-dot').parentElement.parentElement.style.display = 'flex';
-            
-            // Go back to step 1 visually
-            document.querySelectorAll('.form-step').forEach(step => step.classList.remove('active'));
-            document.getElementById('step-1').classList.add('active');
-            
-            // Reset UI indicators
-            document.querySelectorAll('.progress-dot').forEach((dot, idx) => {
-                if(idx > 0) dot.classList.remove('active');
-            });
-            document.querySelectorAll('.progress-line').forEach(line => line.classList.remove('active'));
-            document.getElementById('step-2-text').classList.add('text-gray-400');
-            document.getElementById('step-2-text').classList.remove('text-primary');
-            document.getElementById('step-3-text').classList.add('text-gray-400');
-            document.getElementById('step-3-text').classList.remove('text-primary');
         };
     </script>
 </body>
